@@ -1,0 +1,14 @@
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\bin\Debug\net8.0\TiposGenericos.exe
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\bin\Debug\net8.0\TiposGenericos.deps.json
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\bin\Debug\net8.0\TiposGenericos.runtimeconfig.json
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\bin\Debug\net8.0\TiposGenericos.dll
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\bin\Debug\net8.0\TiposGenericos.pdb
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\obj\Debug\net8.0\TiposGenericos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\obj\Debug\net8.0\TiposGenericos.AssemblyInfoInputs.cache
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\obj\Debug\net8.0\TiposGenericos.AssemblyInfo.cs
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\obj\Debug\net8.0\TiposGenericos.csproj.CoreCompileInputs.cache
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\obj\Debug\net8.0\TiposGenericos.dll
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\obj\Debug\net8.0\refint\TiposGenericos.dll
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\obj\Debug\net8.0\TiposGenericos.pdb
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\obj\Debug\net8.0\TiposGenericos.genruntimeconfig.cache
+C:\Users\danie\Desktop\TiposGenericos\TiposGenericos\TiposGenericos\obj\Debug\net8.0\ref\TiposGenericos.dll
