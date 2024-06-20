@@ -1,0 +1,15 @@
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\bin\Debug\net8.0\ContextosDeConteudo.exe
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\bin\Debug\net8.0\ContextosDeConteudo.deps.json
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\bin\Debug\net8.0\ContextosDeConteudo.runtimeconfig.json
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\bin\Debug\net8.0\ContextosDeConteudo.dll
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\bin\Debug\net8.0\ContextosDeConteudo.pdb
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\obj\Debug\net8.0\ContextosDeConteudo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\obj\Debug\net8.0\ContextosDeConteudo.AssemblyInfoInputs.cache
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\obj\Debug\net8.0\ContextosDeConteudo.AssemblyInfo.cs
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\obj\Debug\net8.0\ContextosDeConteudo.csproj.CoreCompileInputs.cache
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\obj\Debug\net8.0\ContextosDeConteudo.sourcelink.json
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\obj\Debug\net8.0\ContextosDeConteudo.dll
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\obj\Debug\net8.0\refint\ContextosDeConteudo.dll
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\obj\Debug\net8.0\ContextosDeConteudo.pdb
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\obj\Debug\net8.0\ContextosDeConteudo.genruntimeconfig.cache
+C:\Users\deenedev\Documents\GitHub\EstudoC-\Balta\ContextosDeConteudo\obj\Debug\net8.0\ref\ContextosDeConteudo.dll

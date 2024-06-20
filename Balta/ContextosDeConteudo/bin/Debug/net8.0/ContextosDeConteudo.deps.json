@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ContextosDeConteudo/1.0.0": {
+        "runtime": {
+          "ContextosDeConteudo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ContextosDeConteudo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
