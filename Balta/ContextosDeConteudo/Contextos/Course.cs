@@ -8,7 +8,8 @@ namespace ContextosDeConteudo.Contextos
         public IList<Module> Modules;
         public EContentLevel Level { get; set; }
 
-        public Course() 
+        public Course(string title, string url)
+            : base(title, url)
         {
             Modules = new List<Module>();
         }
