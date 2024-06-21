@@ -1,4 +1,5 @@
 ﻿using ContextosDeConteudo.Contextos;
+using ContextosDeConteudo.Subscription;
 
 namespace ContextosDeConteudo 
 {
@@ -29,18 +30,21 @@ namespace ContextosDeConteudo
 
             var career = new Career(".NET", "dot-net");
             var careerItem = new CareerItem(1, "Aprenda C#", "", null);
-            var careerItem2 = new CareerItem(2, "Aprenda JS", "", null);
-            var careerItem3 = new CareerItem(3, "Aprenda TS", "", null);
+            var careerItem2 = new CareerItem(2, "Aprenda JS", "", courseInt);
+            var careerItem3 = new CareerItem(3, "Aprenda TS", "", courseAdv);
  
             career.Items.Add(careerItem);
             career.Items.Add(careerItem2);
             career.Items.Add(careerItem3);
             career.Items.OrderBy(x=>x.Order);
             foreach (var item in career.Items)
-            {                                        
-                Console.WriteLine(item.Order);
+            {                       
                 Console.WriteLine(item.Title);
             }
+
+            var newPayPal = new PayPalSubscription();
+            var student = new Student();
+            student.AddSubscription(newPayPal);
         }
     }
 }
