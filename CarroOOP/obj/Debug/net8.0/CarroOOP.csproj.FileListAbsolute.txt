@@ -1,0 +1,15 @@
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\bin\Debug\net8.0\CarroOOP.exe
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\bin\Debug\net8.0\CarroOOP.deps.json
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\bin\Debug\net8.0\CarroOOP.runtimeconfig.json
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\bin\Debug\net8.0\CarroOOP.dll
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\bin\Debug\net8.0\CarroOOP.pdb
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\obj\Debug\net8.0\CarroOOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\obj\Debug\net8.0\CarroOOP.AssemblyInfoInputs.cache
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\obj\Debug\net8.0\CarroOOP.AssemblyInfo.cs
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\obj\Debug\net8.0\CarroOOP.csproj.CoreCompileInputs.cache
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\obj\Debug\net8.0\CarroOOP.sourcelink.json
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\obj\Debug\net8.0\CarroOOP.dll
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\obj\Debug\net8.0\refint\CarroOOP.dll
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\obj\Debug\net8.0\CarroOOP.pdb
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\obj\Debug\net8.0\CarroOOP.genruntimeconfig.cache
+C:\Users\deenedev\Documents\GitHub\EstudoC-\CarroOOP\obj\Debug\net8.0\ref\CarroOOP.dll
