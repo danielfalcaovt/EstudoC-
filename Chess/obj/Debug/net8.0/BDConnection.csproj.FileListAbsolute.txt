@@ -1,0 +1,15 @@
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\bin\Debug\net8.0\BDConnection.exe
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\bin\Debug\net8.0\BDConnection.deps.json
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\bin\Debug\net8.0\BDConnection.runtimeconfig.json
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\bin\Debug\net8.0\BDConnection.dll
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\bin\Debug\net8.0\BDConnection.pdb
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\obj\Debug\net8.0\BDConnection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\obj\Debug\net8.0\BDConnection.AssemblyInfoInputs.cache
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\obj\Debug\net8.0\BDConnection.AssemblyInfo.cs
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\obj\Debug\net8.0\BDConnection.csproj.CoreCompileInputs.cache
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\obj\Debug\net8.0\BDConnection.sourcelink.json
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\obj\Debug\net8.0\BDConnection.dll
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\obj\Debug\net8.0\refint\BDConnection.dll
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\obj\Debug\net8.0\BDConnection.pdb
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\obj\Debug\net8.0\BDConnection.genruntimeconfig.cache
+C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\obj\Debug\net8.0\ref\BDConnection.dll
