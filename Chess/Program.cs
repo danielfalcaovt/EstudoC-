@@ -50,22 +50,22 @@
                     Tabuleiro[pos] = "XX" + "\t";
                 }else if (pos >= 48 && pos <= 55)
                 {
-                    Tabuleiro[pos] = "PB" + "\t";;
+                    Tabuleiro[pos] = "PB" + "\t";
                 }else if (pos == 56 || pos == 63)
                 {
-                    Tabuleiro[pos] = "TB" + "\t";;
+                    Tabuleiro[pos] = "TB" + "\t";
                 }else if (pos == 57 || pos == 62)
                 {
-                    Tabuleiro[pos] = "CB" + "\t";;
+                    Tabuleiro[pos] = "CB" + "\t";
                 }else if (pos == 58 || pos == 61)
                 {
-                    Tabuleiro[pos] = "BB" + "\t";;
+                    Tabuleiro[pos] = "BB" + "\t";
                 }else if (pos == 59)
                 {
-                    Tabuleiro[pos] = "KB" + "\t";;
+                    Tabuleiro[pos] = "KB" + "\t";
                 }else if (pos == 60)
                 {
-                    Tabuleiro[pos] = "QB" + "\t";;
+                    Tabuleiro[pos] = "QB" + "\t";
                 }
             }
         }

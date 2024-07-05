@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deenedev\\Documents\\GitHub\\EstudoC-\\BDConnection\\BDConnection.csproj": {}
+    "C:\\Users\\deenedev\\Documents\\GitHub\\EstudoC-\\Chess\\BDConnection.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deenedev\\Documents\\GitHub\\EstudoC-\\BDConnection\\BDConnection.csproj": {
+    "C:\\Users\\deenedev\\Documents\\GitHub\\EstudoC-\\Chess\\BDConnection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deenedev\\Documents\\GitHub\\EstudoC-\\BDConnection\\BDConnection.csproj",
+        "projectUniqueName": "C:\\Users\\deenedev\\Documents\\GitHub\\EstudoC-\\Chess\\BDConnection.csproj",
         "projectName": "BDConnection",
-        "projectPath": "C:\\Users\\deenedev\\Documents\\GitHub\\EstudoC-\\BDConnection\\BDConnection.csproj",
+        "projectPath": "C:\\Users\\deenedev\\Documents\\GitHub\\EstudoC-\\Chess\\BDConnection.csproj",
         "packagesPath": "C:\\Users\\deenedev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deenedev\\Documents\\GitHub\\EstudoC-\\BDConnection\\obj\\",
+        "outputPath": "C:\\Users\\deenedev\\Documents\\GitHub\\EstudoC-\\Chess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\deenedev\\AppData\\Roaming\\NuGet\\NuGet.Config",

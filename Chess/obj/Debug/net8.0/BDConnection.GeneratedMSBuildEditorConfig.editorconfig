@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BDConnection
-build_property.ProjectDir = C:\Users\deenedev\Documents\GitHub\EstudoC-\BDConnection\
+build_property.ProjectDir = C:\Users\deenedev\Documents\GitHub\EstudoC-\Chess\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
