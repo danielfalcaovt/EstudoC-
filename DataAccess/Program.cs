@@ -16,9 +16,12 @@ namespace DataAccess
                 /* UpdateCategory(connection); */
                 /* DeleteCategory(connection); */
                 /* CreateManyCategories(connection); */
-                ExecuteProcedure procedures = new ExecuteProcedure(connection);
+                /* ExecuteProcedure procedures = new ExecuteProcedure(connection); */
                 /* procedures.spDeleteStudent(); */
-                procedures.spGetCoursesByCategory();
+                /* procedures.spGetCoursesByCategory(); */
+                /* ExecuteScalar(connection); */
+                /* ReadView(connection); */
+                ListCoursesByCategories(connection);
             }
         }
 
@@ -160,6 +163,54 @@ namespace DataAccess
                 {
                     Console.WriteLine($"{course.CategoryId} - {course.Title}");
                 }
+            }
+        }
+
+        static void ExecuteScalar(SqlConnection connection)
+        {
+            Category category = new Category();
+            category.Id = Guid.NewGuid();
+            category.Title = "Frontend";
+            category.Url = "mobile";
+            category.Summary = "Teste";
+            category.Order = 5;
+            category.Description = "jaisdjasd";
+            category.Featured = false;
+
+            var InsertSql = "INSERT INTO [Category] OUTPUT inserted.[Id] VALUES (NEWID(), @title, @url, @summary, @order, @description, @featured)";
+            var id = connection.ExecuteScalar<Guid>(InsertSql, new {
+                title = category.Title,
+                url = category.Url,
+                summary = category.Summary,
+                order = category.Order,
+                description = category.Description,
+                featured = category.Featured
+            });
+            Console.WriteLine(id);
+        }
+
+        static void ReadView(SqlConnection connection)
+        {
+            var categories = connection.Query<Course>("SELECT * FROM [vwCourses]");
+            foreach (var category in categories)
+            {
+                Console.WriteLine(category.Id);
+            }
+        }
+    
+        static void ListCoursesByCategories(SqlConnection connection)
+        {
+            var sql = @"
+                        SELECT [Course].[Title] AS [Curso], [Category].[Title] AS [Categoria] FROM [Category]
+                        INNER JOIN [Course]
+                        ON [Course].[CategoryId] = [Category].[Id]
+                        ORDER BY [Category].[Title] ASC
+                        ";
+            var result = connection.Query(sql);
+            foreach (var course in result)
+            {
+                Console.WriteLine(course.Curso);
+                Console.WriteLine(course.Categoria);
             }
         }
     }
