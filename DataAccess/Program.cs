@@ -21,7 +21,10 @@ namespace DataAccess
                 /* procedures.spGetCoursesByCategory(); */
                 /* ExecuteScalar(connection); */
                 /* ReadView(connection); */
-                ListCoursesByCategories(connection);
+                /* ListCoursesByCategories(connection); */
+                /* OneToMany(connection); */
+                /* LikeIn(connection); */
+                Transaction(connection);
             }
         }
 
@@ -201,16 +204,105 @@ namespace DataAccess
         static void ListCoursesByCategories(SqlConnection connection)
         {
             var sql = @"
-                        SELECT [Course].[Title] AS [Curso], [Category].[Title] AS [Categoria] FROM [Category]
-                        INNER JOIN [Course]
-                        ON [Course].[CategoryId] = [Category].[Id]
-                        ORDER BY [Category].[Title] ASC
+                        SELECT * FROM [CareerItem]
+                        INNER JOIN [Course] ON
+                        [CareerItem].[CourseId] = [Course].[Id]
                         ";
-            var result = connection.Query(sql);
-            foreach (var course in result)
+            var result = connection.Query<CareerItem, Course, CareerItem>(
+                sql, 
+                (careerItem, course) => {
+                    careerItem.Course = course;
+                    return careerItem;
+                    }, 
+                splitOn: "Id"
+                );
+            foreach (var careerItem in result)
             {
-                Console.WriteLine(course.Curso);
-                Console.WriteLine(course.Categoria);
+                Console.WriteLine(careerItem.Title);
+                Console.WriteLine(careerItem.Course.Title);
+            }
+        }
+        static void OneToMany(SqlConnection connection)
+        {
+            var sql = @"
+                    SELECT * FROM [Career]
+                    INNER JOIN [CareerItem] ON
+                    [CareerItem].[CareerId] = [Career].[Id]
+                    ORDER BY [Career].[Title] ASC
+            ";
+            string oldResult = "";
+            int count = 0;
+            var careers = new List<Career>();
+            Career oldCareer = new Career();
+            var result = connection.Query<Career, CareerItem, Career>(
+                sql,
+                (career, item) => {
+                    var car = careers.Where(x => x.Id == career.Id).FirstOrDefault(); // PROCURA CARREIRA COM ID IGUAL NO NOVO ARRAY
+                    if (car == null) // CASO CARREIRA NAO SEJA ENCONTRADA
+                    {
+                        car = career; // OLD CARREIRA RECEBE CARREIRA NOVA
+                        car.Items.Add(item); // ADICIONA O ITEM DESSA CARREIRA NELA
+                        careers.Add(car); // ADICIONA O CARRERITEM AO CARREIRAS
+                    }
+                    else // CASO CARREIRA SEJA ENCONTRADA
+                    {
+                        car.Items.Add(item); // ADICIONA NAQUELA CARREIRA UM NOVO ITEM
+                    }
+                    return career;
+                },
+                splitOn: "CareerId"
+                );
+                foreach (var career in careers)
+                {
+                    Console.WriteLine($"{career.Title}");
+                    foreach (var cItem in career.Items)
+                    {
+                        Console.WriteLine($"- {cItem.Title}");
+                    }
+                }
+        }
+    
+        static void LikeIn(SqlConnection connection)
+        {
+            var query = "SELECT TOP 10 * FROM [Course] WHERE [Id] IN @Id";
+            var result = connection.Query<Course>(query, new {
+                Id = new[] {
+                    "5c349848-e717-9a7d-1241-0e6500000000",
+                    "5e4bf896-7c21-3e47-b9da-208300000000"
+                }
+            });
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.Title);
+            }
+        }
+
+        static void Transaction(SqlConnection connection)
+        {
+            Category category = new Category();
+            category.Id = Guid.NewGuid();
+            category.Title = "Frontend";
+            category.Url = "mobile";
+            category.Summary = "Teste";
+            category.Order = 5;
+            category.Description = "jaisdjasd";
+            category.Featured = false;
+
+            var InsertSql = "INSERT INTO [Category] VALUES (@id, @title, @url, @summary, @order, @description, @featured)";
+            connection.Open();
+            using (var transaction = connection.BeginTransaction())
+            {
+                var rows = connection.Execute(InsertSql, new {
+                    id = category.Id,
+                    title = category.Title,
+                    url = category.Url,
+                    summary = category.Summary,
+                    order = category.Order,
+                    description = category.Description,
+                    featured = category.Featured
+                }, transaction);
+                Console.WriteLine($"{rows} Linhas Afetadas KKK");
+                transaction.Rollback();
             }
         }
     }
