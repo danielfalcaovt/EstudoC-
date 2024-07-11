@@ -8,7 +8,7 @@ namespace DataAccess
     {
         static void Main(string[] args)
         {
-            const string connectionString = "Server=localhost, 1433;Database=balta;User ID=sa;Password=Brbr109br@;Trusted_Connection=False; TrustServerCertificate=True;";
+            const string connectionString = "Server=localhost, 1433;Database=balta;User ID=sa;Password=password;Trusted_Connection=False; TrustServerCertificate=True;";
             using (var connection = new SqlConnection(connectionString))
             {
                 /* ListCategories(connection); */

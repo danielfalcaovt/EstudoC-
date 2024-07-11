@@ -7,7 +7,7 @@ namespace Blog
 {
     class Program
     {
-        static private string connectionString = "Server=localhost,1433;Database=Blog;User ID=sa;Password=Brbr109br@;Trusted_Connection=False; TrustServerCertificate=True;";
+        static private string connectionString = "Server=localhost,1433;Database=Blog;User ID=sa;Password=password;Trusted_Connection=False; TrustServerCertificate=True;";
         static void Main(string[] args)
         {
             using (var connection = new SqlConnection(connectionString))
