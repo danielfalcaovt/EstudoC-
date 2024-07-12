@@ -8,7 +8,7 @@ namespace DataAccess
     {
         static void Main(string[] args)
         {
-            const string connectionString = "Server=localhost, 1433;Database=balta;User ID=sa;Password=password;Trusted_Connection=False; TrustServerCertificate=True;";
+            const string connectionString = "Server=localhost, 1433;Database=balta;User ID=sa;Password=password@;Trusted_Connection=False; TrustServerCertificate=True;";
             using (var connection = new SqlConnection(connectionString))
             {
                 /* ListCategories(connection); */
@@ -24,7 +24,8 @@ namespace DataAccess
                 /* ListCoursesByCategories(connection); */
                 /* OneToMany(connection); */
                 /* LikeIn(connection); */
-                Transaction(connection);
+                /* Transaction(connection); */
+                OneToManyReview(connection);
             }
         }
 
@@ -222,6 +223,20 @@ namespace DataAccess
                 Console.WriteLine(careerItem.Course.Title);
             }
         }
+        
+        static void OneToOne(SqlConnection connection)
+        {
+            var sql = "SELECT * FROM [Career] INNER JOIN [CareerItem] ON [Career].[CareerId] = [CareerItem].[Id]";
+            var result = connection.Query<CareerItem, Course, CareerItem>(sql, (careerItem, course) => {
+                careerItem.Course = course;
+                return careerItem;
+                }, splitOn: "Id");
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
         static void OneToMany(SqlConnection connection)
         {
             var sql = @"
@@ -261,7 +276,32 @@ namespace DataAccess
                     }
                 }
         }
-    
+
+        static void OneToManyReview(SqlConnection connection)
+        {
+            var careers = new List<Career>();
+            var sql = @"
+                    SELECT * FROM [Career]
+                    INNER JOIN [CareerItem] ON
+                    [CareerItem].[CareerId] = [Career].[Id]
+                    ORDER BY [Career].[Title] ASC
+            ";
+                var result = connection.Query<Career, CareerItem, Career>(sql, (career, item) => {
+                    var car = careers.Where(x=>x.Id == career.Id).FirstOrDefault();
+                    if (car == null)
+                    {
+                        car = career;
+                        car.Items.Add(item);
+                        careers.Add(car);
+                        return career;
+                    }
+                    else
+                    {
+                        car.Items.Add(item);
+                        return career;
+                    }
+            }, splitOn: "CareerId");
+        }    
         static void LikeIn(SqlConnection connection)
         {
             var query = "SELECT TOP 10 * FROM [Course] WHERE [Id] IN @Id";
