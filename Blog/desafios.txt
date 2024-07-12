@@ -1,0 +1,16 @@
+o aplicativo precisa:
+    Cadastrar um usuário *
+    Cadastrar um role *
+    Vincular um role a um usuário *
+    cadastrar uma categoria *
+    cadastrar tag *
+    cadastrar post *
+    vincular post e tag *
+    listar os usuarios (nome, email e roles separados por virgula) *
+    listar categorias com quantidade de post
+    listar tags idem
+    listar posts de uma categoria
+    listar todos os posts com uma categoria
+    listar todos os ports com suas tags
+
+VERY IZI B-)

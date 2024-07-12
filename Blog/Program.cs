@@ -2,6 +2,8 @@
 using Microsoft.Data.SqlClient;
 using Blog.Models;
 using Blog.Repositories;
+using Dapper;
+using Blog.Screens;
 
 namespace Blog
 {
@@ -10,54 +12,20 @@ namespace Blog
         static private string connectionString = "Server=localhost,1433;Database=Blog;User ID=sa;Password=password;Trusted_Connection=False; TrustServerCertificate=True;";
         static void Main(string[] args)
         {
-            using (var connection = new SqlConnection(connectionString))
+            try
             {
-                ReadUser(connection);
-            }            
-        }
-        static void ReadUser(SqlConnection connection)
-        {
-            var repository = new UserRepository();
-            var result = repository.Get(connection);
-            foreach (var item in result)
-            {
-                Console.WriteLine(item.Name);
+                Console.WriteLine("Bem Vindo ao Blog!");
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    CScreens screens = new CScreens(connection);
+                    screens.HomeScreen();
+                }
             }
-        }
-        static void InsertUser(SqlConnection connection)
-        {
-            var user = new User()
+            catch(Exception err)
             {
-                Name = "Pedroca",
-                Bio = "OmGiTsSoPrEtTy",
-                Email = "Hello, i'm at you door again",
-                PasswordHash="ASD",
-                Image="YAY",
-                Slug="YAY"
-            };
-            var result = connection.Insert<User>(user);
-            Console.WriteLine($"{result} affected rows");
-        }
-        static void UpdateUser(SqlConnection connection)
-        {
-            var user = new User()
-            {
-                Id = 1,
-                Name = "Pedroca",
-                Bio = "OmGiTsSoPrEtTy",
-                Email = "Hello, i'm at you door again",
-                PasswordHash="ASD",
-                Image="YAY",
-                Slug="YAY"
-            };
-            var result = connection.Update<User>(user);
-            Console.WriteLine($"{result} affected rows");
-        }
-        static void DeleteUser(SqlConnection connection)
-        {
-            var user = connection.Get<User>(1);
-            var result = connection.Delete(user);
-            Console.WriteLine($"{result} affected rows");
+                Console.WriteLine(err.Message);
+            }
         }
     }
 }
+            

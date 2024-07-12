@@ -8,7 +8,7 @@ namespace DataAccess
     {
         static void Main(string[] args)
         {
-            const string connectionString = "Server=localhost, 1433;Database=balta;User ID=sa;Password=password@;Trusted_Connection=False; TrustServerCertificate=True;";
+            const string connectionString = "Server=localhost, 1433;Database=balta;User ID=sa;Password=password;Trusted_Connection=False; TrustServerCertificate=True;";
             using (var connection = new SqlConnection(connectionString))
             {
                 /* ListCategories(connection); */
@@ -343,6 +343,19 @@ namespace DataAccess
                 }, transaction);
                 Console.WriteLine($"{rows} Linhas Afetadas KKK");
                 transaction.Rollback();
+            }
+            static void ManyToMany(SqlConnection connection)
+            {
+                var sql = "SELECT * FROM [Course]; SELECT * FROM [Category]";
+                using (var multiple = connection.QueryMultiple(sql))
+                {
+                    var categorias = multiple.Read<Category>();
+                    var cursos = multiple.Read<Course>();
+                    foreach (var categoria in categorias)
+                    {
+                        Console.WriteLine(categoria.Title);
+                    }
+                }
             }
         }
     }

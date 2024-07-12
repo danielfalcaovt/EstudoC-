@@ -3,8 +3,12 @@ using Dapper.Contrib.Extensions;
 namespace Blog.Models
 {
     [Table("[User]")]
-    public class User
+    public class User : Model
     {
+        public User()
+        {
+            Roles = new List<Role>();
+        }
         public int Id { get; set; }
         public string Name { get; set; }
         public string PasswordHash { get; set; }
@@ -12,5 +16,8 @@ namespace Blog.Models
         public string Email { get; set; }
         public string Image { get; set; }
         public string Slug { get; set; }
+        
+        [Write(false)]
+        public IList<Role> Roles { get; set; }
     }
 }
